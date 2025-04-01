@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Marker-based WebAR</title>
+    <title>Intersection WebAR 1:1</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
-    <style>
-      body { margin: 0; overflow: hidden; }
-      #instructions { position: fixed; top: 10px; left: 10px; background: white; padding: 10px; z-index: 100; }
-    </style>
+    <style>body { margin: 0; overflow: hidden; }</style>
   </head>
   <body>
-    <div id="instructions">Point your camera at the marker to see the 3D model.</div>
     <a-scene embedded arjs>
-      <a-marker type="pattern" url="pattern-raw.patt">
-        <a-entity gltf-model="intersection_model_firstpass.glb" scale="1 1 1" position="0 0 0" rotation="-90 0 0"></a-entity>
+      <a-marker type='pattern' url='marker.patt'>
+        <a-entity gltf-model='intersection_model.glb' scale='1 1 1' rotation='-90 0 0'></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
